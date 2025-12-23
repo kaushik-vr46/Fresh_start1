@@ -17,4 +17,4 @@ The content is organized into a logical progression:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/python-learning-journey.git](https://github.com/your-username/python-learning-journey.git)
+   git clone https://github.com/kaushik-vr46/Fresh_start1.git
