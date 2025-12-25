@@ -8,10 +8,9 @@ The content is organized into a logical progression:
 
 | Section | Description | Key Topics |
 | :--- | :--- | :--- |
-| **01 Basics** | Core syntax and logic | Variables, Loops, Lists, Dictionaries |
-| **02 Intermediate** | Structural programming | Functions, Scope, File Handling, APIs |
-| **03 Advanced** | Pythonic patterns | OOP, Decorators, Iterators, AsyncIO |
-| **04 Projects** | Practical application | Mini-apps and automation scripts |
+| **Basics** | Core syntax and logic | Variables, Loops, Lists, Dictionaries |
+| **Intermediate** | Structural programming | Functions, Scope, File Handling, APIs |
+| **Advanced** | Pythonic patterns | OOP, Decorators, Iterators, AsyncIO |
 
 ## 🚀 How to Use This Repo
 
