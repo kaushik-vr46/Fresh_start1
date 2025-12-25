@@ -45,3 +45,7 @@ class Square(Shape):
     def get_area(self):
         return self.side * self.side  # Area of the square
 
+s = Square("blue", 5)
+print(s.get_area())  # Output: 25
+print(s.get_color())  # Output: blue
+
