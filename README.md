@@ -6,7 +6,7 @@ This repository is a comprehensive collection of Python learning progress, cover
 
 ## 📂 Complete File Directory & Descriptions
 
-### **🔵 Foundational Concepts**
+### **Foundational Concepts**
 
 | File | Description |
 |:---|:---|
@@ -15,7 +15,7 @@ This repository is a comprehensive collection of Python learning progress, cover
 | **03_control_flow.py** | Loop control statements (break, continue), nested loops with practical 2D list traversal examples |
 | **variable_length_arguments.py** | Functions with variable-length arguments using `*args` for flexible parameter handling |
 
-### **🟢 Intermediate Data Structures & Algorithms**
+### **Intermediate Data Structures & Algorithms**
 
 | File | Description |
 |:---|:---|
@@ -26,7 +26,7 @@ This repository is a comprehensive collection of Python learning progress, cover
 | **palindrome_check.py** | Three methods to check palindromes: two-pointer approach, string reversal, and case-insensitive comparison |
 | **pattern_searching_string.py** | Finding all positions/indices where a pattern occurs in a text string using `str.find()` |
 
-### **🟡 List & Set Operations**
+### **List & Set Operations**
 
 | File | Description |
 |:---|:---|
@@ -36,7 +36,7 @@ This repository is a comprehensive collection of Python learning progress, cover
 | **seperate_even_and_odd.py** | Separate even and odd numbers from a list into two separate lists |
 | **CheckiList_sorted.py** | Verify if a list is sorted in ascending order: adjacent element comparison vs. sorted() comparison |
 
-### **🔴 Number Systems & Mathematical Algorithms**
+### **Number Systems & Mathematical Algorithms**
 
 | File | Description |
 |:---|:---|
@@ -47,7 +47,7 @@ This repository is a comprehensive collection of Python learning progress, cover
 | **prime_factorisation.py** | Find and print all prime factors of a number with prime checking utility |
 | **06_primes_and_divisors.py** | Optimized prime number checking and divisor finding using √n optimization with time complexity analysis |
 
-### **🟣 Object-Oriented Programming (OOP)**
+### **Object-Oriented Programming (OOP)**
 
 | File | Description |
 |:---|:---|
@@ -57,7 +57,7 @@ This repository is a comprehensive collection of Python learning progress, cover
 
 ---
 
-## 🎯 Key Concepts Covered
+## Key Concepts Covered
 
 ### Basics
 - Variables & Data Types
@@ -93,7 +93,7 @@ This repository is a comprehensive collection of Python learning progress, cover
 
 ---
 
-## 🚀 How to Access This Repository
+## How to Access This Repository
 
 ### **Option 1: Clone via Git (Recommended)**
 
@@ -136,7 +136,7 @@ code /path/to/Fresh_start1
 
 ---
 
-## 💻 Running the Files
+## Running the Files
 
 ### **Run a Single Python File**
 
@@ -178,7 +178,7 @@ for file in sorted([f for f in os.listdir('.') if f.endswith('.py')]):
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
 ### **Required**
 - **Python 3.7+** (Recommended: Python 3.9 or higher)
@@ -203,7 +203,7 @@ source venv/bin/activate
 
 ---
 
-## 📖 How to Study This Repository
+## How to Study This Repository
 
 ### **For Beginners**
 1. Start with `01_sets_and_io.py` and `02_operators.py`
@@ -261,7 +261,7 @@ C:\Users\YourUsername\AppData\Local\Programs\Python\Python313\python.exe 01_sets
 
 ---
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 After studying this repository, you will understand:
 
@@ -277,7 +277,7 @@ After studying this repository, you will understand:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Suggestions and improvements are welcome! Feel free to:
 - Fork the repository
@@ -289,15 +289,6 @@ Suggestions and improvements are welcome! Feel free to:
 ## 📝 License
 
 This repository is open source and available for educational purposes.
-
----
-
-## 📞 Contact & Support
-
-For questions or issues:
-- Visit the [GitHub Repository](https://github.com/kaushik-vr46/Fresh_start1)
-- Review the code comments in each file
-- Check the code output and test with different inputs
 
 ---
 
