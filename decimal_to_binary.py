@@ -1,24 +1,27 @@
-''' 17's binary is 16+1
-i.e. 1/16 ; 0/8 ; 0/4 ; 0/2 ; 1/1
-i.e. 10001
-for 12 = 8+4
-1/8 ; 1/4 ; 0/2 ; 1/1
-i.e. 1101
-for 15 = 8+4+2+1
-1/8 ; 1/4 ; 1/2 ; 1/1
-i.e. 1111'''
+'''
+DECIMAL TO BINARY CONVERSION EXAMPLES:
+17 in decimal = 10001 in binary
+  Powers of 2: 1×16 + 0×8 + 0×4 + 0×2 + 1×1 = 17
+
+12 in decimal = 1100 in binary
+  Powers of 2: 1×8 + 1×4 + 0×2 + 0×1 = 12
+
+15 in decimal = 1111 in binary
+  Powers of 2: 1×8 + 1×4 + 1×2 + 1×1 = 15
+'''
+
+# --- Method 1: Manual conversion using modulo and division ---
 def decToBinary(n):
-    if n==0:
+    if n == 0:  # Special case: 0 in decimal is 0 in binary
         return "0"
-    res=""
-    while n>0:
-        res = res+str(n%2) #the number can only be attached/concatenated to the end of res only if it is converted to a string and concatenated.
-        n=n//2
-    return res[::-1] #this is done as the numbers are attached to the end and we need a reverse of res to get the correct order of the binary number
+    res = ""  # String to store binary digits
+    while n > 0:
+        res = res + str(n % 2)  # Get last binary digit (n%2 is 0 or 1)
+        n = n // 2  # Integer divide by 2 to process next digit
+    return res[::-1]  # Reverse the string because digits were added backwards
 
-#OR (built-in function method)
-
+# --- Method 2: Using built-in bin() function ---
 def decToBin(n):
-    res=bin(n)
-    return res[2:] #as the bin function will return a value that starts with '0b' indicating it as binary so we need to eliminate it
+    res = bin(n)  # bin() returns string like '0b10001' for 17
+    return res[2:]  # Remove '0b' prefix by slicing from index 2 onwards
 

@@ -1,55 +1,45 @@
 '''
---- Traditional version of prime number check and finding all divisors of a number which is a much slower code and higher computation duration ---
---- START OF EXAMPLE CODE ---
+--- Traditional (SLOWER) version of prime number check and divisor finding ---
+This demonstrates a less efficient approach for reference purposes.
 
-# prime number
+SLOWER PRIME CHECK:
+- Checks ALL numbers from 2 to n-1 = O(n) time complexity
+- Has a bug: prints "Yes" multiple times instead of once
 
-if(n<=1):
-    print("No")
-else:
-    for i in range(2,n):
-        if(n%i==0):
-            print("No")
-            break
-        else:
-            print("Yes")
-
-#all divisors of a number
-
-for x in range(i,n+1):
-    if n%x==0:
-        print(x)
-
-n = int(input("Enter a number to check: ")) 
-
---- END OF EXAMPLE CODE ---
+SLOWER DIVISOR CHECK:
+- Checks ALL numbers from 1 to n
+- Less efficient than the optimized approach
 '''
 
-# --- All Divisors (Optimized version of above code) ---
+# --- All Divisors (Optimized) ---
 n = int(input("Enter a number to check: "))
 
 print(f"--- Divisors of {n} ---")
 x = 1
+# Check only up to √n because divisors come in pairs
+# If x divides n, then (n/x) also divides n
 while x * x < n:
-    if n % x == 0: # gets both divisors in one step and quicker than the original step
-        print(x)          # First divisor
-        print(n // x)     # Corresponding pair divisor
+    if n % x == 0:  # If x divides n
+        print(x)  # Print first divisor
+        print(n // x)  # Print corresponding pair divisor (n/x)
     x = x + 1
-if x * x == n:            # Perfect square check
-    print(x)
+if x * x == n:  # Check if n is a perfect square
+    print(x)  # If perfect square, x is a divisor printed once
 
 
-# --- Prime Number Check (Optimized version of above code) ---
-
+# --- Prime Number Check (Optimized) ---
 print(f"\n--- Is {n} Prime? ---")
 if n <= 1:
-    print("No")
+    print("No")  # 0, 1, and negatives are not prime
 else:
     x = 2
     is_prime = True
     # Optimization: Check only up to square root of n
-    while x * x <= n: # (optimised so that it checks only until the square root of n) If n=31 and x>5, x*x is more than 31 and not useful to check anything beyond that, if it is still not divisible then it would definitely be a prime number as 6*6=36>31 and if anything below 5 was divisible by 31 then 31 wouldn't be a prime number
-        if n % x == 0:
+    # If n has a divisor > √n, it must also have a divisor < √n
+    # Example: For n=31, only check up to √31 ≈ 5.6
+    # If 31 is not divisible by 2,3,4,5 then it's definitely prime
+    while x * x <= n:  # Only check divisors up to √n
+        if n % x == 0:  # If divisible by x, then n is NOT prime
             print("No")
             is_prime = False
             break
@@ -57,3 +47,14 @@ else:
     
     if is_prime:
         print("Yes")
+
+'''
+TIME COMPLEXITY COMPARISON:
+SLOW approach: O(n) - checks 2 to n-1
+- For n=1,000,000: checks 999,998 numbers
+
+OPTIMIZED approach: O(√n) - checks 2 to √n
+- For n=1,000,000: checks only ~1,000 numbers
+
+That's approximately 1000x faster!
+'''

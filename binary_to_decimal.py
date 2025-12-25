@@ -1,23 +1,30 @@
-'''110's decimal is 6
-i.e. 1/4 ; 1/2 ; 0/1 that indicates 4+2 is 6
+'''
+BINARY TO DECIMAL CONVERSION EXAMPLES:
+110 in binary = 6 in decimal
+  Calculation: 1×4 + 1×2 + 0×1 = 4 + 2 = 6
 
-for 10001 it will be
-1/16 ; 0/8 ; 0/4 ; 0/2 ; 1/1 which is 16+1 = 17'''
+10001 in binary = 17 in decimal
+  Calculation: 1×16 + 0×8 + 0×4 + 0×2 + 1×1 = 16 + 1 = 17
+'''
 
+# --- Method 1: Manual approach using powers of 2 ---
 def binToDec(b):
-    res=0
-    p=1
-    for x in reversed(b):
-        res=res+int(x)*p #start from the rightmost number in the binary by taking it as string, and then making it decimal and multiplying if it has a non zero value
-        p=p*2 #to multiply as we move leftwards the powers of 2 to get whether the dec value to add exists or not
+    res = 0  # Initialize result
+    p = 1  # Power of 2, starts at 2^0 = 1
+    for x in reversed(b):  # Start from rightmost digit by reversing the string
+        res = res + int(x) * p  # Add (digit × current power of 2) to result
+        p = p * 2  # Move to next power of 2 (multiply by 2 each iteration)
     return res
 
-#OR (in-built function)
-
+# --- Method 2: Using built-in function (Simpler) ---
 def binToDec2(b):
-    res=int(b,2) #giving a base as 2 to multiply the binary by powers of 2 for dec to bin conversion
+    # int(b, 2) interprets the string 'b' as binary (base 2) and converts to decimal
+    res = int(b, 2)
     return res
 
-n=input()
-print(binToDec2(n))
-print(binToDec(n))
+# Get binary input from user
+n = input()
+
+# Print decimal output using both methods
+print(binToDec2(n))  # Output using built-in function
+print(binToDec(n))   # Output using manual calculation
