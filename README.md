@@ -292,4 +292,4 @@ This repository is open source and available for educational purposes.
 
 ---
 
-**Happy Learning! 🚀
+### **Happy Learning!**
